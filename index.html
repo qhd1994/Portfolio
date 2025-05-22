@@ -6,7 +6,6 @@
 
         <!-- SEO -->
         <meta name="description" content="프론트엔드 개발자 유희봉 포트폴리오입니다.">
-        <meta name="keywords" content="포트폴리오, 프론트엔드, 유희봉">
         <meta name="author" content="유희봉">
 
         <!-- Open Graph -->
@@ -16,7 +15,6 @@
         <meta property="og:url" content="https://heebong.me">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="ko_KR">
-        <meta property="og:site_name" content="유희봉의 포트폴리오">
 
         <!-- 파비콘 -->
         <link rel="shortcut icon" href="Assets/imge/port.png"/>
@@ -48,6 +46,7 @@
                 overflow: hidden;
                 width: 500px;
                 height: 400px;
+                max-width: 90vw;
             }
             .portfolio-bg {
                 top: 0;
@@ -55,9 +54,18 @@
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                /* opacity: 0.9; */
                 background-image: url("Assets/imge/photo05.jpg");
                 background-size: cover;
+                background-position: center; /* 추가하면 더 중앙 정렬됨 */
+            }
+            .portfolio-bg::before {
+                content : "";
+                position: absolute;
+                top : 0;
+                left : 0;
+                width : 100%;
+                height : 100%;
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
             }
             .portfolio-cont {
                 top: 0;
@@ -66,18 +74,15 @@
                 height: 100%;
                 position: absolute;
                 z-index: 1;
-                color: #222222;
+                color: #000000;
             }
             .portfolio-cont h1 {
                 margin-top: 30px;
             }
-            .portfolio-cont div {
+            .portfolio-title {
                 padding-inline: 40px;
                 text-align: right;
             }
-
-
-
             .portfolio-cont p {
                 margin: 0;
                 font-size: 18px;
@@ -91,25 +96,50 @@
             .portfolio-cont p:last-of-type {
                 margin-bottom: 16px;
             }
-            
-            .portfolio-cont button {
+
+            .portfolio-items {
+                display: flex;
+                justify-content: center;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .portfolio-items a {
                 display: inline-block;
+                font-size: 14px;
+                border-radius: 5px;
                 height: 34px;
                 padding: 0px 12px;
                 background: #6f7a86;
                 color: #ffffff;
-                border: none;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-            .portfolio-cont button:hover {
-                background: #8ea1b6;
-                font-size: 16px;
-            }
-            .portfolio-cont a {
-                color: #ffffff;
                 text-decoration: none;
+                line-height: 34px;
+                margin-right: 8px;
+                transition: all 0.1s ease-in-out;
             }
+            .portfolio-items a:last-of-type {
+                margin-right: 0;
+            }
+            .portfolio-items a:hover {
+                background: #8ea1b6;
+                transform: scale(1.1);
+            }
+
+            @media (max-width: 550px) {
+                .portfolio-title {
+                    font-size: 14px;
+                }
+            }
+            @media (max-width: 490px) {
+                .portfolio-title {
+                    font-size: 12px;
+                }
+            }
+            @media (max-width: 450px) {
+                .portfolio-card {
+                    max-width: 95vw;
+                }
+            }
+
         </style>
     </head>
     <body>
@@ -117,37 +147,20 @@
             <div class="portfolio-bg"></div>
             <div class="portfolio-cont">
                 <h1>유희봉</h1>
-                <div>
+                <div class="portfolio-title">
                     <b>열 번 풀면 안풀리는 스크립트는 없다</b><br>
                     기술에 대한 깊은 <b>호기심</b>과 끊임없는 <b>학습</b>으로 성장하는 개발자
                 </div>
                 <p>Frontend Developer</p>
                 <p> email : qhd1994@naver.com</p>
                 <p> kakao ID : qhd1994</p>
-                <button>
+                <div class="portfolio-items">
                     <a href="https://github.com/qhd1994?tab=repositories" target="_blank">GitHub</a>
-                </button>
-                <button>
                     <a href="/Portfolio/Source/about.html">About me</a>
-                </button>
-                <button>
                     <a href="/Portfolio/Source/project.html">Project</a>
-                </button>
-                <button>
                     <a href="/Portfolio/Source/study.html">Study</a>
-                </button>
+                </div>
             </div>
         </div>
-
-
-
-        <!-- <script src="script.js"></script> -->
-        <script>
-            document
-                .getElementById("viewProjects")
-                .addEventListener("click", function () {
-                    alert("프로젝트 페이지로 이동합니다!");
-                });
-        </script>
     </body>
 </html>
