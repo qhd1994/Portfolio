@@ -305,7 +305,7 @@ function nextPage() {
         delay: 1
     });
     setTimeout(() => {
-        location.href = "../Source/about.html";
+        location.href = "..Portfolio/Source/about.html";
     }, 2000);
 }
 
