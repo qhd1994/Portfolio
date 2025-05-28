@@ -307,6 +307,37 @@ function nextPage() {
     setTimeout(() => {
         location.href = "..Portfolio/Source/about.html";
     }, 2000);
+
+    gsap.to(openCanvas, {
+        duration: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+        delay: 3
+    });
+    gsap.to(openTitle, {
+        duration: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+        delay: 3
+    });
+    gsap.to(openButtonTxt, {
+        duration: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+        delay: 3
+    });
+    gsap.to(openButton, {
+        duration: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+        delay: 3
+    });
+    gsap.to(main, {
+        duration: 0,
+        backgroundColor: "#b5eaff",
+        ease: "expo.inOut",
+        delay: 3
+    });
 }
 
 //인트로 메세지
