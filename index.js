@@ -263,6 +263,7 @@ for (var i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener("click", animateButton, false);
 }
 // 버튼 페이지 트랜지션
+const hellow = document.querySelector(".hellow");
 const main = document.querySelector("#main");
 const openCanvas = main.querySelector(".open__canvas");
 const openTitle = main.querySelector(".open__title");
@@ -274,6 +275,11 @@ openButton.addEventListener("click", () => {
 });
 
 function nextPage() {
+    gsap.to(hellow, {
+        duration: 1.5,
+        opacity: 0,
+        ease: "expo.inOut"
+    });
     gsap.to(openCanvas, {
         duration: 1.5,
         opacity: 0,
@@ -308,6 +314,14 @@ function nextPage() {
         location.href = "Source/about.html";
     }, 2000);
 
+
+    //
+    gsap.to(hellow, {
+        duration: 0,
+        opacity: 0,
+        ease: "expo.inOut",
+        delay: 3
+    });
     gsap.to(openCanvas, {
         duration: 0,
         opacity: 1,
@@ -328,6 +342,7 @@ function nextPage() {
     });
     gsap.to(openButton, {
         duration: 0,
+        width: "154px",
         opacity: 1,
         ease: "expo.inOut",
         delay: 3
@@ -339,6 +354,3 @@ function nextPage() {
         delay: 3
     });
 }
-
-//인트로 메세지
-// const hellow = document.querySelector(".hellow");
