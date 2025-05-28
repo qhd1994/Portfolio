@@ -24,142 +24,36 @@
         <!-- 타이틀 -->
         <title>유희봉의 포트폴리오</title>
 
-        <!-- 스타일 -->
-        <style>
-            body {
-                min-height: 400px;
-                padding: 0;
-                margin: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100vw;
-                height: 100vh;
-                background-color: #db9494;
-                overflow-x: hidden;
-            }
-            .portfolio-card {
-                border-radius: 10px;
-                text-align: center;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                position: relative;
-                overflow: hidden;
-                width: 500px;
-                height: 400px;
-                max-width: 90vw;
-            }
-            .portfolio-bg {
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                background-image: url("Assets/imge/photo05.jpg");
-                background-size: cover;
-                background-position: center; /* 추가하면 더 중앙 정렬됨 */
-            }
-            .portfolio-bg::before {
-                content : "";
-                position: absolute;
-                top : 0;
-                left : 0;
-                width : 100%;
-                height : 100%;
-                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.6));
-            }
-            .portfolio-cont {
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                z-index: 1;
-                color: #000000;
-            }
-            .portfolio-cont h1 {
-                margin-top: 30px;
-            }
-            .portfolio-title {
-                padding-inline: 40px;
-                text-align: right;
-            }
-            .portfolio-cont p {
-                margin: 0;
-                font-size: 18px;
-                text-align: left;
-                padding-left: 40px;
-                color: #ffffff;
-            }
-            .portfolio-cont p:first-of-type {
-                margin-top: 105px;
-            }
-            .portfolio-cont p:last-of-type {
-                margin-bottom: 16px;
-            }
-
-            .portfolio-items {
-                display: flex;
-                justify-content: center;
-                white-space: nowrap;
-            }
-            .portfolio-items a {
-                display: inline-block;
-                font-size: 14px;
-                border-radius: 5px;
-                height: 34px;
-                padding: 0px 12px;
-                background: #6f7a86;
-                color: #ffffff;
-                text-decoration: none;
-                line-height: 34px;
-                margin-right: 8px;
-                transition: all 0.1s ease-in-out;
-            }
-            .portfolio-items a:last-of-type {
-                margin-right: 0;
-            }
-            .portfolio-items a:hover {
-                background: #8ea1b6;
-                transform: scale(1.1);
-            }
-
-            @media (max-width: 550px) {
-                .portfolio-title {
-                    font-size: 14px;
-                }
-            }
-            @media (max-width: 490px) {
-                .portfolio-title {
-                    font-size: 12px;
-                }
-            }
-            @media (max-width: 450px) {
-                .portfolio-card {
-                    max-width: 95vw;
-                }
-            }
-
-        </style>
+        <!-- css -->
+        <link rel="stylesheet" href="Assets/css/reset.css"/>
+        <link rel="stylesheet" href="Assets/css/index.css"/>
     </head>
     <body>
-        <div class="portfolio-card">
-            <div class="portfolio-bg"></div>
-            <div class="portfolio-cont">
-                <h1>유희봉</h1>
-                <div class="portfolio-title">
-                    <b>열 번 풀면 안풀리는 스크립트는 없다</b><br>
-                    기술에 대한 깊은 <b>호기심</b>과 끊임없는 <b>학습</b>으로 성장하는 개발자
-                </div>
-                <p>Frontend Developer</p>
-                <p> email : qhd1994@naver.com</p>
-                <p> kakao ID : qhd1994</p>
-                <div class="portfolio-items">
-                    <a href="https://github.com/qhd1994?tab=repositories" target="_blank">GitHub</a>
-                    <a href="/Portfolio/Source/about.html">About me</a>
-                    <a href="/Portfolio/Source/project.html">Project</a>
-                    <a href="/Portfolio/Source/study.html">Study</a>
-                </div>
-            </div>
+        <!-- html -->
+        <div class="hellow">
+            <span>안녕하세요. <b>유희봉</b>의 <b>포트폴리오</b>입니다.</span>
         </div>
+        <main id="main">
+            <div class="open__canvas">
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="open__title">
+                <h1 id="title">Hello, My PORTFOLIO.</h1>
+            </div>
+            <div class="open__button">
+                <button class="bubbly-button">
+                    <span>about me</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="index.js"></script>
+        <script>
+            (function () {
+                scrollTo(0, 0);
+            })();
+        </script>
     </body>
 </html>

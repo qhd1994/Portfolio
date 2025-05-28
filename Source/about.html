@@ -4,15 +4,92 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- SEO -->
+        <meta name="description" content="프론트엔드 개발자 유희봉 포트폴리오입니다.">
+        <meta name="author" content="유희봉">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="유희봉의 포트폴리오">
+        <meta property="og:description" content="프론트엔드 개발자 유희봉 포트폴리오입니다.">
+        <meta property="og:image" content="../Assets/imge/photo01.jpg">
+        <meta property="og:url" content="https://heebong.me">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="ko_KR">
+
         <!-- 파비콘 -->
-        <link rel="shortcut icon" href="Assets/imge/port.png"/>
-        <link rel="apple-touch-icon-precomposed" href="Assets/imge/port.png"/>
-        <link rel="icon" href="Assets/imge/port.png" sizes="128x128"/>
+        <link rel="shortcut icon" href="../Assets/imge/port.png"/>
+        <link rel="apple-touch-icon-precomposed" href="../Assets/imge/port.png"/>
+        <link rel="icon" href="../Assets/imge/port.png" sizes="128x128"/>
 
         <!-- 타이틀 -->
         <title>유희봉의 포트폴리오</title>
+
+        <!-- css -->
+        <link rel="stylesheet" href="../Assets/css/reset.css"/>
+        <link rel="stylesheet" href="../Assets/css/about.css"/>
     </head>
     <body>
-        <h1>About me</h1>
+        <!-- html -->
+        <div class="block"></div>
+        <div class="scroll">0</div>
+        <main id="main">
+            <section id="section01">
+                <h1>About me</h1>
+                <img src="../Assets/imge/photo01.jpg" alt="">
+            </section>
+            <section id="section02">
+                
+            </section>
+            <section id="section03"></section>
+            <section id="section04"></section>
+            <section id="section05"></section>
+        </main>
+
+
+
+
+        <!-- <h1>About me</h1>
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>안녕하세요! 저는 <b>프론트엔드 개발자 유희봉</b>입니다.</p>
+            <p>사용자의 경험을 최우선으로 생각하며, 더 나은 웹 환경을 만들기 위해 끊임없이 고민하고 학습하고 있습니다.</p>
+
+            <h3>🚀 나의 개발 철학</h3>
+            <p>열 번 풀면 안 풀리는 스크립트는 없다! 끊임없는 도전과 분석으로 해결책을 찾는 개발자를 목표로 합니다.</p>
+
+            <h3>📌 관심 기술</h3>
+            <ul>
+                <li>React, Next.js 등 최신 프론트엔드 프레임워크</li>
+                <li>CSS 애니메이션과 UI/UX 디자인 개선</li>
+                <li>웹 성능 최적화 및 접근성 향상</li>
+            </ul>
+
+            <h3>💡 성장 스토리</h3>
+            <p>처음 웹 개발을 접했을 때 단순한 페이지에서 시작했지만, 점점 더 다양한 기능을 구현하며 성장해 왔습니다. 
+            현재는 사용자 중심의 인터페이스와 빠르고 효율적인 웹 애플리케이션을 개발하는 데 집중하고 있습니다.</p>
+
+            <h3>🔗 연락처 & 링크</h3>
+            <p>📧 이메일: qhd1994@naver.com</p>
+            <p>💬 카카오톡 ID: qhd1994</p>
+            <p>🔗 <a href="https://github.com/qhd1994?tab=repositories" target="_blank">GitHub</a></p>
+        </section> -->
+
+        <!-- script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="about.js"></script>
+        <script>
+            (function () {
+                scrollTo(0, 0);
+                const block = document.querySelector(".block");
+                gsap.to(block, {
+                    duration: 1.5,
+                    opacity: 0,
+                    ease: "expo.inOut"
+                });
+                setTimeout(()=> {
+                    block.style.display = 'none'
+                }, 1500)
+            })();
+        </script>
     </body>
 </html>
