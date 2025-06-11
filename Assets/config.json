@@ -1,0 +1,24 @@
+{
+    "ProjectInvolved": {
+        "SmarTreeFIT-2023": {
+            "titel" : "신영증권 스마트리핏 2.0 개발 프로젝트",
+            "period" : "2022.10~2023.09",
+            "imgName" : "P-SmarTreeFIT.png"
+        },
+        "SmarTreeFIT-2024": {
+            "titel" : "신영증권 스마트리핏 2.0 개편 프로젝트",
+            "period" : "2023.10~2024.07",
+            "imgName" : "P-SmarTreeFIT.png"
+        },
+        "green": {
+            "titel" : "신영증권 그린 개편 프로젝트",
+            "period" : "2024.08~2024.10",
+            "imgName" : "P-green.png"
+        },
+        "MOJA-platform": {
+            "titel" : "모든자산 플렛폼 개발 프로젝트",
+            "period" : "2024.11~2025.04",
+            "imgName" : "P-MOJA-platform.png"
+        }
+    }
+}

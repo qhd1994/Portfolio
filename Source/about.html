@@ -31,7 +31,6 @@
     <body>
         <!-- html -->
         <div class="block"></div>
-        <div class="scroll">0</div>
         <main id="main">
             <section id="section01">
                 <h1>About me</h1>
@@ -44,44 +43,44 @@
                 <span>저는 판다처럼 온손하고 애교있는</span>
                 <span>코딩과 맥주를 좋아하는 배나온</span>
                 <span>개발자 유희봉 입니다.</span>
-                <div class="panda-svg">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">
+                <div class="panda-svg svg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 600 500">
                         <defs>
-                            <radialGradient
+                            <radialgradient
                                 id="gradBG"
                                 cx="300"
                                 cy="300"
                                 r="300"
-                                gradientUnits="userSpaceOnUse">
+                                gradientunits="userSpaceOnUse">
                                 <stop offset="0" stop-color="#FA4B00"/>
                                 <stop offset="1" stop-color="#FF003C"/>
-                            </radialGradient>
-                            <radialGradient
+                            </radialgradient>
+                            <radialgradient
                                 id="gradBody"
                                 cx="300"
                                 cy="348.476"
                                 r="65.719"
-                                gradientTransform="matrix(1 0 0 1.034 0 -11.877)"
-                                gradientUnits="userSpaceOnUse">
+                                gradienttransform="matrix(1 0 0 1.034 0 -11.877)"
+                                gradientunits="userSpaceOnUse">
                                 <stop offset=".501" stop-color="#FFF"/>
                                 <stop offset=".684" stop-color="#FCFCFC"/>
                                 <stop offset=".815" stop-color="#F3F3F4"/>
                                 <stop offset=".928" stop-color="#E3E5E6"/>
                                 <stop offset="1" stop-color="#D5D7D9"/>
-                            </radialGradient>
-                            <radialGradient
+                            </radialgradient>
+                            <radialgradient
                                 id="gradHead"
                                 cx="300.012"
                                 cy="258.826"
                                 r="91.565"
-                                gradientTransform="matrix(1 0 0 .716 0 73.539)"
-                                gradientUnits="userSpaceOnUse">
+                                gradienttransform="matrix(1 0 0 .716 0 73.539)"
+                                gradientunits="userSpaceOnUse">
                                 <stop offset=".702" stop-color="#FFF"/>
                                 <stop offset=".811" stop-color="#FCFCFC"/>
                                 <stop offset=".889" stop-color="#F3F3F4"/>
                                 <stop offset=".957" stop-color="#E3E5E6"/>
                                 <stop offset="1" stop-color="#D5D7D9"/>
-                            </radialGradient>
+                            </radialgradient>
                         </defs>
                         <g id="panda">
                             <path
@@ -170,7 +169,7 @@
                 </div>
             </section>
             <section id="section03">
-                <h2>Project</h2>
+                <h2>Project Involved</h2>
                 <div class="card-container">
                     <div class="card">
                         <img class="card-img" src="../Assets/imge/P-SmarTreeFIT.png" alt="SmarTreeFIT"></img>
@@ -178,7 +177,7 @@
                         <div class="card-content">
                             <div class="card-titel">신영증권 스마트리핏 2.0 개발 프로젝트</div>
                             <div class="card-period">2022.10~2023.09</div>
-                            <span id="SmarTreeFIT_2023" class="card-more">자세히</span>
+                            <span id="SmarTreeFIT-2023" class="card-more">자세히</span>
                         </div>
                     </div>
                     <div class="card">
@@ -187,7 +186,7 @@
                         <div class="card-content">
                             <div class="card-titel">신영증권 스마트리핏 2.0 개편 프로젝트</div>
                             <div class="card-period">2023.10~2024.07</div>
-                            <span id="SmarTreeFIT_2024" class="card-more">자세히</span>
+                            <span id="SmarTreeFIT-2024" class="card-more">자세히</span>
                         </div>
                     </div>
                     <div class="card">
@@ -196,24 +195,25 @@
                         <div class="card-content">
                             <div class="card-titel">신영증권 그린 개편 프로젝트</div>
                             <div class="card-period">2024.08~2024.10</div>
-                            <span id="SmarTreeFIT_2024" class="card-more">자세히</span>
+                            <span id="green" class="card-more">자세히</span>
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img" src="../Assets/imge/P-MOJA-platform.png" alt="MOJA-platform"></img>
+                        <img
+                            class="card-img"
+                            src="../Assets/imge/P-MOJA-platform.png"
+                            alt="MOJA-platform"></img>
                         <div class="card-bg"></div>
                         <div class="card-content">
                             <div class="card-titel">모든자산 플렛폼 개발 프로젝트</div>
                             <div class="card-period">2024.11~2025.04</div>
-                            <span id="SmarTreeFIT_2024" class="card-more">자세히</span>
+                            <span id="MOJA-platform" class="card-more">자세히</span>
                         </div>
                     </div>
                 </div>
-                <a class="more">더보기</a>
-                <!-- <span class="ing">참여 프로젝트</span> -->
             </section>
             <section id="section04">
-                <span class="ing">경력 및 경험</span>
+                <h2>Personal Project</h2>
             </section>
             <section id="section05">
                 <span class="ing">스킬 및 공부</span>
@@ -221,127 +221,12 @@
         </main>
 
         <!-- script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="about.js"></script>
-<script>
-    (function () {
-        scrollTo(0, 0);
-        const block = document.querySelector(".block");
-        gsap.to(block, {
-            duration: 1.5,
-            opacity: 0,
-            ease: "expo.inOut"
-        });
-        setTimeout(() => {
-            block.style.display = 'none'
-        }, 1500)
-    })();
-</script>
-<script>
-    // 판다
-    function JellyPanda() {
-        var tlPanda = new TimelineLite({delay: 0.5});
-
-        tlPanda
-
-        // SET
-            .set(".svg-container", {perspective: 200})
-            .set("#panda *, #btnP", {transformOrigin: "center center"})
-
-            // JELLYPANDA MOTION
-            .staggerTo("#panda *", 2, {
-                scaleX: 1.2,
-                scaleY: 0.85,
-                y: -18,
-                rotationX: 15,
-                rotationY: -15,
-                rotationZ: 2,
-                ease: Elastic.easeOut
-            }, 0.015, 0.2)
-            .staggerTo("#panda *", 2, {
-                scaleX: 1,
-                scaleY: 1,
-                y: 0,
-                rotationY: 0,
-                rotationX: 0,
-                rotationZ: 0,
-                ease: Elastic.easeOut
-            }, 0.015, 0.4)
-
-            // FACE MOVING LEFT
-            .to("#face", 0.6, {
-                x: -20,
-                rotationY: -20,
-                ease: Expo.easeOut
-            }, "b")
-            .to("#head1", 0.6, {
-                x: -14,
-                rotationY: -20,
-                ease: Expo.easeOut
-            }, "b")
-            .to("#head2", 0.6, {
-                x: -6,
-                rotationY: -15,
-                ease: Expo.easeOut
-            }, "b")
-            .to("#ear1", 0.6, {
-                y: 5,
-                rotationY: -20,
-                ease: Expo.easeOut
-            }, "b")
-            .to("#ear2", 0.6, {
-                y: 5,
-                rotationY: -20,
-                ease: Expo.easeOut
-            }, "b")
-
-            // FACE MOVING RIGHT
-            .to("#face", 0.6, {
-                x: 20,
-                rotationY: 20,
-                ease: Expo.easeOut
-            }, "c+=.1")
-            .to("#head1", 0.6, {
-                x: 14,
-                rotationY: 25,
-                ease: Expo.easeOut
-            }, "c+=.1")
-            .to("#head2", 0.6, {
-                x: 6,
-                rotationY: 15,
-                ease: Expo.easeOut
-            }, "c+=.1")
-            .to("#ear1", 0.6, {
-                y: 5,
-                rotationY: 20,
-                ease: Expo.easeOut
-            }, "c+=.1")
-            .to("#ear2", 0.6, {
-                y: 5,
-                rotationY: 20,
-                ease: Expo.easeOut
-            }, "c+=.1")
-
-            // PANDA BACK POSITION
-            .to("#panda *", 1.5, {
-                x: 0,
-                y: 0,
-                rotationY: 0
-            }, "+=1");
-
-        return tlPanda;
-    }
-
-    var master = new TimelineMax({onComplete: onComplete});
-    tl = JellyPanda();
-    master.add(tl, 0);
-
-    function onComplete() {
-        tl
-            .clear()
-            .add(JellyPanda());
-        master.play(0);
-    }
-</script>
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+        <script src="about.js"></script>
+        <script>
+            (function () {
+                scrollTo(0, 0);
+            })();
+        </script>
+    </body>
 </html>

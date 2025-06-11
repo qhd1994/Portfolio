@@ -1,3 +1,10 @@
+fetch("Assets/config.json")
+    .then(response => response.json())
+    .then(config => {
+        localStorage.setItem("config", JSON.stringify(config));
+    })
+    .catch(error => console.error("Error loading JSON:", error));
+
 // 배경
 var PI2 = Math.PI * 2;
 var canvas = document.getElementById("canvas");
@@ -313,7 +320,6 @@ function nextPage() {
     setTimeout(() => {
         location.href = "Source/about.html";
     }, 2000);
-
 
     //
     gsap.to(hellow, {
